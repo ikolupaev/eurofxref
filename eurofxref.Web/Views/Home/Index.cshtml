@@ -1,0 +1,38 @@
+﻿@model IEnumerable<SelectListItem>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Currency Converter</title>
+
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/rickshaw.css" rel="stylesheet" />
+
+    <script src="~/Scripts/jquery-1.9.1.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <script src="~/Scripts/d3.v3.js"></script>
+    <script src="~/Scripts/rickshaw.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Currency Converter</h2>
+        <div class="panel panel-default">
+            <div id="convertor" class="panel-body">
+                @Html.DropDownList("From", Model) / @Html.DropDownList("To", Model) latest rate: <span id="latestRate"></span>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">History Data for EUR / @Html.DropDownList("HistoryCurrency", Model)</div>
+            <div class="panel-body">
+                <div id="chart"></div>
+            </div>
+        </div>
+    </div>
+    <div>
+    </div>
+    <script src="~/Scripts/exchange.rate.js"></script>
+    <script src="~/Scripts/history.data.js"></script>
+</body>
+</html>

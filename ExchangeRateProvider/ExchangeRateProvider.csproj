@@ -41,8 +41,6 @@
   <ItemGroup>
     <Compile Include="EuroExchangeRateService.cs" />
     <Compile Include="ExchangeRate.cs" />
-    <Compile Include="ExchangeRateService.cs" />
-    <Compile Include="IEuroExchangeRateService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
